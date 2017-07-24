@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: 'Pacifico', cursive;
+    font-size: 1rem;
+    color: #FFF;
+    background-color: rgba(158, 158, 158, 0.79);
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.container {
+    background-image: url('mariposa-azul.jpg');
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    height: 300px;
+    width: 300px;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+}
+
+.container:before,
+.container:after {
+    content:"";
+    display: block;
+    width: 0;
+    height: 3px;
+    background-color: #FFF;
+    position: absolute;
+    -webkit-transition: all .4s;
+    -o-transition: all .4s;
+    transition: all .4s;
+}
+
+.container:before {
+    top: 2rem;
+    left: 1rem;
+}
+
+.container:after {
+    bottom: 2rem;
+    right: 1rem;
+}
+
+.container:hover h1,
+.container:hover p {
+    -webkit-transform: translateX(0%);
+        -ms-transform: translateX(0%);
+            transform: translateX(0%);
+}
+
+.container:hover {
+    -webkit-background-size: 200% 200%;
+            background-size: 200%;
+}
+
+.container:hover:before,
+.container:hover:after {
+    width: 80%;
+}
+
+
+h1,
+p {
+    position: absolute;
+    left: 1rem;
+    -webkit-transition: all .5s;
+        -o-transition: all .5s;
+        transition: all .5s;
+}
+
+h1 {
+    top: 4rem;
+    -webkit-transform: translateX(-1000%);
+        -ms-transform: translateX(-1000%);
+            transform: translateX(-1000%);
+}
+
+p {
+    line-height: 1.5;
+    bottom: 4rem;
+    -webkit-transform: translateX(1000%);
+        -ms-transform: translateX(1000%);
+            transform: translateX(1000%);
+}
+
